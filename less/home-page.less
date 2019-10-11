@@ -1,24 +1,45 @@
 .home {
-
+  header{
+    border-bottom: 2px dashed @navigation-border;
+    // border: 2px solid red;
+    img{
+      // margin-top: 2%;
+      margin-bottom: 2%;
+      border-top-width: 20px;
+    }
+    @media @phone{
+      margin:0 2% 2% 2%;
+    }
+  }//closes header
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    @media @phone{
+      margin: 2%;
+      flex-direction: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @phone {
+        width: 100%;
+        margin-top: 2%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @phone {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
+        width:100%;
       }
     }
   }
@@ -26,21 +47,42 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @phone {
+      flex-direction: column-reverse;
+      width: 100%;
+      width: 96%;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @phone {
+        width: 100%;
+      }
+    }
+
+    img{
+      width: 100%;
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      // @media @phone {
+      //   width: 100%;
+      //   border: 1px solid blue;
+      // }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @phone{
+      width: 96%;
+      margin: 2%;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +94,19 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @phone {
+      flex-direction: column;
+      align-items: center;
+      margin: 2%;
+      padding: 2%;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @phone{
+        width: 90%;
+      }
     }
   }
 }// home
