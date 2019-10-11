@@ -1,1 +1,21 @@
 // Mixins in here
+
+.buttons(@bg-color, @txt-color, @width){
+    background: @bg-color;
+    border-radius: 10px;
+    padding: 5%;
+    color: @txt-color;
+    width: @width;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.btn{
+    .buttons(teal, white, 200px);
+    @media @phone {
+        // width: 100%;
+        // background-color: darkturquoise;
+        .buttons(rgb(31, 168, 192), white, 400px);
+        padding: 3%;
+      }
+}
